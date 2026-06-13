@@ -1,3 +1,4 @@
+/*CABEÇALHO*/
 header {
   display: flex;
   flex-direction: column;
@@ -23,7 +24,6 @@ header div:nth-of-type(1) {
 header div:nth-of-type(2) {
   display: flex;
   flex-direction: row;
-  
   width: 100%;
   padding: 5px 30px;
   box-sizing: border-box;
@@ -45,6 +45,7 @@ header div:nth-of-type(2) ul li a.active {
   border-bottom: 2px solid #341616;
 }
 
+/*INÍCIO*/
 #home {
   width: 100%;
   max-height: 850px;
@@ -52,18 +53,19 @@ header div:nth-of-type(2) ul li a.active {
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
-  justify-content: flex-start;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0 50px; 
   box-sizing: border-box;
 }
 
 #home .intro-home {
   margin-top: 250px;
-  max-width: 550px; 
+  width: 100%;
+  max-width: 100%;
   display: flex;
   text-align: left;
+  justify-content: flex-start;
   flex-direction: column;
   height: 500px;
 }
@@ -73,20 +75,100 @@ header div:nth-of-type(2) ul li a.active {
   flex-direction: row;
   width: 100%;
   max-width: 100%;
-  font-size: 2.7em;
-  gap: 14em;
-  padding: 1px 10px;
+  justify-content: space-between;
+  font-size: x-small;
+  padding: 1px 30px;
   box-sizing: border-box;
+}
+
+#home .intro-home div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1px 30px;
+  box-sizing: border-box;
+  gap: 40em;
+}
+
+#home .intro-home div:nth-of-type(2) p {
+  color: white;
+  font-size: large;
+  text-align: justify;
 }
 
 #home .intro-home div h1 {
-  font-size: 3em;
+  font-size: 12em;
   color: white;
 }
 
-#home .intro-home p {
-  color: white;
-  font-size: large;
-  padding: 1px 10px;
+
+/*MENU*/
+#menu {
+  display: flex;
+  justify-content: center;
+  background-image: url('assets/backgrounds/background-menu.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10em 0; 
+}
+
+#menu .conteiner-branco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 1100px;
+  border-radius: 30px;
+}
+
+#menu .conteiner-branco .card-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; 
+  max-width: 900px;
+  gap: 3em;
+  padding: 50px 1px;
   box-sizing: border-box;
 }
+
+#menu .conteiner-branco .card-menu:nth-of-type(1) {
+  border-bottom: 1px solid #341616;
+}
+
+#menu .conteiner-branco .card-menu .cafes {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+
+#menu .conteiner-branco .card-menu .cafes img {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+#menu .conteiner-branco .card-menu .cafes h2 {
+  margin: 1em 0 0 0; /* Reseta as margens padrões do h2 */
+  font-size: large;
+  font-weight: bold;
+}
+
+#menu .conteiner-branco .card-menu .cafes p:nth-of-type(1) {
+  margin: 1em 0 0 0;
+  font-size: smaller;
+  font-weight: 400;
+}
+
+#menu .conteiner-branco .card-menu .cafes p:nth-of-type(2) {
+  margin: 1em 0 0 0;
+  font-size: medium;
+  font-weight: 600;
+}
+
+/*LOJAS*/
