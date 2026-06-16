@@ -100,6 +100,8 @@ header div:nth-of-type(2) ul li a.active {
 #home .intro-home div h1 {
   font-size: 12em;
   color: white;
+  font-family: 'Pacifico', sans-serif;
+  font-weight: 400;
 }
 
 
@@ -111,7 +113,7 @@ header div:nth-of-type(2) ul li a.active {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 10em 0; 
+  padding: 5em 0; 
 }
 
 #menu .conteiner-branco {
@@ -121,6 +123,9 @@ header div:nth-of-type(2) ul li a.active {
   background-color: white;
   width: 1100px;
   border-radius: 30px;
+  max-height: 510px; 
+  overflow-y: auto;  
+  padding-right: 5px; 
 }
 
 #menu .conteiner-branco .card-menu {
@@ -129,8 +134,8 @@ header div:nth-of-type(2) ul li a.active {
   justify-content: center;
   align-items: flex-start; 
   max-width: 900px;
-  gap: 3em;
-  padding: 50px 1px;
+  gap: 7em;
+  padding: 40px 1px;
   box-sizing: border-box;
 }
 
@@ -154,7 +159,7 @@ header div:nth-of-type(2) ul li a.active {
 }
 
 #menu .conteiner-branco .card-menu .cafes h2 {
-  margin: 1em 0 0 0; /* Reseta as margens padrões do h2 */
+  margin: 1em 0 0 0; 
   font-size: large;
   font-weight: bold;
 }
@@ -171,4 +176,501 @@ header div:nth-of-type(2) ul li a.active {
   font-weight: 600;
 }
 
+#menu .conteiner-branco::-webkit-scrollbar {
+    width: 10px;            
+}
+
+#menu .conteiner-branco::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0); 
+    border-radius: 10px;
+}
+
+#menu .conteiner-branco::-webkit-scrollbar-thumb {
+    background: #72593f;         
+    border-radius: 10px;
+}
+
+#menu .conteiner-branco::-webkit-scrollbar-thumb:hover {
+    background: #705234;        
+}
+
 /*LOJAS*/
+#lojas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+  padding: 0 20px;
+}
+
+.card-lojas {
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  height: 450px;
+
+  border-radius: 30px;
+  overflow: hidden; 
+}
+
+.card-lojas .fotos-lojas {
+  width: 500px; 
+  height: 100%; 
+  position: relative;
+}
+
+.card-lojas .fotos-lojas .foto-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; 
+}
+
+.card-lojas .fotos-lojas .foto-slide.ativa {
+  opacity: 1; 
+  z-index: 1; 
+}
+
+.card-lojas .loja-textos {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px; 
+  box-sizing: border-box;
+  color: white;
+}
+
+.card-lojas .loja-textos h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.card-lojas .loja-textos p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2. Ajustando a caixinha da foto para colar nas bordas */
+.card-lojas .fotos-lojas {
+  width: 500px; 
+  height: 100%; 
+}
+
+.card-lojas .fotos-lojas img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/*SOBRE NÓS*/
+#sobre {
+  background-image: url(assets/backgrounds/sobre-nos-background3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.sobre-container {
+  width: 1200px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 80px;
+  align-items: center;
+}
+
+.sobre-manifesto span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #a06b2f;
+  font-weight: bold;
+}
+
+.sobre-manifesto h2 {
+  font-size: 42px;
+  color: #341616;
+  line-height: 1.3;
+  margin-top: 10px;
+  font-family: 'Pacifico', serif;
+  font-weight: 400;
+}
+
+.sobre-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+.pilar-item h3 {
+  font-size: 20px;
+  color: #341616;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.pilar-item p {
+  font-size: 16px;
+  color: #46392c;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*CONTATO*/
+#contato {
+  background-color: white;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contato-container {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.contato-canais {
+  flex: 1;
+}
+
+.contato-canais h2 {
+  font-size: 36px;
+  color: #341616;
+  margin: 0 0 15px 0;
+}
+
+.contato-canais p {
+  font-size: 16px;
+  color: #665544;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.links-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-contato {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #341616;
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.item-contato svg {
+  color: #a06b2f;
+}
+
+.item-contato:hover {
+  color: #a06b2f;
+  transform: translateX(4px);
+}
+
+.contato-horarios {
+  flex: 1;
+  background-color: #faf7f4;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contato-horarios h3 {
+  font-size: 22px;
+  color: #341616;
+  margin: 0 0 25px 0;
+  font-weight: 700;
+}
+
+.linha-horario {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #665544;
+}
+
+.linha-horario span:first-child {
+  font-weight: 600;
+  color: #341616;
+}
+
+.linhas-pontilhadas {
+  flex: 1;
+  border-bottom: 2px dotted #ebdcd0;
+  margin: 0 15px;
+}
+
+/*FOOTER*/
+.footer-site {
+  background-color: #341616;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-conteudo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-logo {
+  font-family: 'Pacifico', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footer-site p {
+  font-size: 13px;
+  color: #ebdcd0;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+
+  /* --- AJUSTES DO CABEÇALHO --- */
+  header {
+    padding: 10px 0;
+  }
+
+  /* Oculta as informações de endereço e número no mobile */
+  header div:nth-of-type(1) {
+    display: none;
+  }
+
+  /* Prepara o contêiner para o funcionamento do menu */
+  header div:nth-of-type(2) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+
+  /* Cria o ícone do menu hambúrguer usando CSS Puro */
+  header div:nth-of-type(2)::after {
+    content: "☰";
+    font-size: 28px;
+    color: #341616;
+    cursor: pointer;
+    order: 2;
+  }
+
+  /* Transforma a lista ul na aba lateral */
+  header div:nth-of-type(2) ul {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Começa escondida na direita */
+    width: 260px;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5em;
+    padding: 100px 30px 30px 30px;
+    box-sizing: border-box;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    margin: 0;
+    z-index: 999;
+  }
+
+  /* O TRUQUE DO CLIQUE: Quando o usuário toca na área do menu, a aba desliza e FICA fixa */
+  header div:nth-of-type(2):active ul,
+  header div:nth-of-type(2):focus-within ul,
+  header div:nth-of-type(2) ul:hover {
+    right: 0;
+  }
+
+  /* Cria um botão invisível de fechar cobrindo o fundo quando a aba está aberta */
+  header div:nth-of-type(2) ul::before {
+    content: "✕";
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 22px;
+    color: #341616;
+    font-weight: bold;
+  }
+
+  /* Quando o usuário clica em qualquer link interno, a aba fecha imediatamente */
+  header div:nth-of-type(2) ul li a:active {
+    pointer-events: none;
+  }
+
+  /* Garante que a logo permaneça visível no topo esquerdo */
+  header div:nth-of-type(2) ul li:first-child {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  header div:nth-of-type(2) ul li a:not(.logo) {
+    font-size: 16px;
+  }
+
+
+  /* --- SEÇÃO INÍCIO (HOME) --- */
+  #home {
+    padding: 0 20px;
+    max-height: none;
+    min-height: 100vh;
+  }
+
+  #home .intro-home {
+    margin-top: 140px;
+    height: auto;
+    gap: 30px;
+  }
+
+  #home .intro-home div:nth-of-type(1) {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #home .intro-home div h1 {
+    font-size: 5.5em;
+    line-height: 1;
+  }
+
+  #home .intro-home div:nth-of-type(2) {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+
+  #home .intro-home div:nth-of-type(2) p {
+    font-size: 16px;
+  }
+
+
+  /* --- SEÇÃO MENU --- */
+  #menu {
+    padding: 3em 15px;
+  }
+
+  #menu .conteiner-branco {
+    width: 100%;
+    max-height: 480px;
+    padding: 20px;
+  }
+
+  #menu .conteiner-branco .card-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+    max-width: 100%;
+  }
+
+  #menu .conteiner-branco .card-menu .cafes {
+    width: 100%;
+  }
+
+  #menu .conteiner-branco .card-menu .cafes img {
+    width: 100%;
+    height: 200px;
+  }
+
+
+  /* --- SEÇÃO LOJAS --- */
+  #lojas {
+    margin-top: 2em;
+  }
+
+  .card-lojas {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-lojas .fotos-lojas {
+    width: 100%;
+    height: 240px;
+  }
+
+  .card-lojas .loja-textos {
+    padding: 30px 20px;
+  }
+
+  .card-lojas .loja-textos h2 {
+    font-size: 26px;
+  }
+
+  .card-lojas .loja-textos p {
+    font-size: 15px;
+  }
+
+
+  /* --- SEÇÃO SOBRE NÓS --- */
+  #sobre {
+    margin-top: 2em;
+    padding: 50px 20px;
+  }
+
+  .sobre-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    height: auto;
+    width: 100%;
+  }
+
+  .sobre-manifesto h2 {
+    font-size: 30px;
+  }
+
+  .sobre-grid {
+    gap: 30px;
+  }
+
+
+  /* --- SEÇÃO CONTATO --- */
+  #contato {
+    padding: 50px 20px;
+  }
+
+  .contato-container {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .contato-canais h2 {
+    font-size: 28px;
+  }
+
+  .contato-horarios {
+    padding: 30px 20px;
+  }
+}
