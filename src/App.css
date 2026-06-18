@@ -258,7 +258,6 @@ header div:nth-of-type(2) ul li a.active {
   margin: 0;
 }
 
-/* 2. Ajustando a caixinha da foto para colar nas bordas */
 .card-lojas .fotos-lojas {
   width: 500px; 
   height: 100%; 
@@ -458,18 +457,14 @@ header div:nth-of-type(2) ul li a.active {
 }
 
 @media (max-width: 768px) {
-
-  /* --- AJUSTES DO CABEÇALHO --- */
   header {
     padding: 10px 0;
   }
-
-  /* Oculta as informações de endereço e número no mobile */
+ 
   header div:nth-of-type(1) {
     display: none;
   }
 
-  /* Prepara o contêiner para o funcionamento do menu */
   header div:nth-of-type(2) {
     position: relative;
     display: flex;
@@ -478,7 +473,6 @@ header div:nth-of-type(2) ul li a.active {
     padding: 10px 30px;
   }
 
-  /* Cria o ícone do menu hambúrguer usando CSS Puro */
   header div:nth-of-type(2)::after {
     content: "☰";
     font-size: 28px;
@@ -487,11 +481,10 @@ header div:nth-of-type(2) ul li a.active {
     order: 2;
   }
 
-  /* Transforma a lista ul na aba lateral */
   header div:nth-of-type(2) ul {
     position: fixed;
     top: 0;
-    right: -100%; /* Começa escondida na direita */
+    right: -100%;
     width: 260px;
     height: 100vh;
     background-color: white;
@@ -506,14 +499,12 @@ header div:nth-of-type(2) ul li a.active {
     z-index: 999;
   }
 
-  /* O TRUQUE DO CLIQUE: Quando o usuário toca na área do menu, a aba desliza e FICA fixa */
   header div:nth-of-type(2):active ul,
   header div:nth-of-type(2):focus-within ul,
   header div:nth-of-type(2) ul:hover {
     right: 0;
   }
 
-  /* Cria um botão invisível de fechar cobrindo o fundo quando a aba está aberta */
   header div:nth-of-type(2) ul::before {
     content: "✕";
     position: absolute;
@@ -524,12 +515,10 @@ header div:nth-of-type(2) ul li a.active {
     font-weight: bold;
   }
 
-  /* Quando o usuário clica em qualquer link interno, a aba fecha imediatamente */
   header div:nth-of-type(2) ul li a:active {
     pointer-events: none;
   }
 
-  /* Garante que a logo permaneça visível no topo esquerdo */
   header div:nth-of-type(2) ul li:first-child {
     position: absolute;
     top: 30px;
@@ -540,8 +529,6 @@ header div:nth-of-type(2) ul li a.active {
     font-size: 16px;
   }
 
-
-  /* --- SEÇÃO INÍCIO (HOME) --- */
   #home {
     padding: 0 20px;
     max-height: none;
@@ -574,8 +561,6 @@ header div:nth-of-type(2) ul li a.active {
     font-size: 16px;
   }
 
-
-  /* --- SEÇÃO MENU --- */
   #menu {
     padding: 3em 15px;
   }
@@ -603,8 +588,6 @@ header div:nth-of-type(2) ul li a.active {
     height: 200px;
   }
 
-
-  /* --- SEÇÃO LOJAS --- */
   #lojas {
     margin-top: 2em;
   }
@@ -632,8 +615,6 @@ header div:nth-of-type(2) ul li a.active {
     font-size: 15px;
   }
 
-
-  /* --- SEÇÃO SOBRE NÓS --- */
   #sobre {
     margin-top: 2em;
     padding: 50px 20px;
@@ -654,8 +635,6 @@ header div:nth-of-type(2) ul li a.active {
     gap: 30px;
   }
 
-
-  /* --- SEÇÃO CONTATO --- */
   #contato {
     padding: 50px 20px;
   }
