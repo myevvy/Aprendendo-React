@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react' // ou @vitejs/plugin-react
 
 export default defineConfig({
   plugins: [react()],
-  base: './', 
+  base: '/Aprendendo-React/', 
 })
